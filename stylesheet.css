@@ -1,5 +1,4 @@
-@charset "utf-8";
-<style>
+/*stylesheet.css */
   button {
     border-radius: 5px;
     color: white;
@@ -16,8 +15,13 @@
     100% {
       background-color: lightgreen;
     }
+	.bioPic 
+	{
+	display:block;
+	width: 50em;
+	height:auto;
+	border:thin #000000;
+	border-radius: 100%;
+	}
   }
-  
-  
-</style>
 
