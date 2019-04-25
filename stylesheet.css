@@ -18,8 +18,8 @@
 	.bioPic 
 	{
 	display:block;
-	width: 50em;
-	height:auto;
+	width: 200;
+	height:200;
 	border:thin #000000;
 	border-radius: 100%;
 	}
