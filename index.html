@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+    
   <title>Keep Boise Beautiful</title>
 
-
+<base href="/" />
 
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="msapplication-tap-highlight" content="no" />
 
 <link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link type='text/css' rel='stylesheet' href="maincss.css">
+     
+      
 <style>
       #map {
         height: 400px;  
@@ -22,11 +24,11 @@
 </head>
 
 <body>
-     <body>
-      <div class="progress-bar bg-success" style="width:100%;"><img src="image0.png" class="img-fluid" style="width:250px; height: auto;"><h3><small class="text-muted">Keep Boise Beautiful</small></h3></div>
-      <div class="bg-secondary">Content here</div>
+     <div class="container-fluid">
+      <div class="progress-bar bg-success" style="width:100%;"><img src="/image0.png" class="img-fluid" style="width:250px; height: auto;"><h3><small class="text-muted"></div>
+      <div class="bg-secondary"><h1 class="Display-4" style="color:black;">Keep Boise Beautiful</h1></div>
     <div id="map"> </div>
-	<script src="MapController.js" type='text/jscript'></script>
+	
     <script>
       function initMap() {
        var map = new google.maps.Map(document.getElementById('map'), {
@@ -115,23 +117,25 @@
         });
       }
     </script>
-       
+          <script src="MapController.js" type='text/jscript'></script>
+     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+             
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGCMiqzOs2q6xEDZqxDdVbXbfEPVYhbzM&callback=initMap" async defer></script>
       
-    <div class="row bg-secondary"><div class="col-sm-1 bg-success">Button 1</div>  
-    <div class="col-sm-1"></div>
-    <div class="col-sm-1 bg-success">Second Button</div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-1 bg-success">Third Button</div>
+    <div class="row bg-secondary"><div class="col-sm bg-success btn-lg">Button 1</div>  
+    <div class="col-sm"></div>
+    <div class="col-sm bg-success btn-lg">Second Button</div>
+    <div class="col-sm"></div>
+    <div class="col-sm bg-success btn-lg">Third Button</div>
                          </div>                    
         </body>
     <app-root></app-root>
          
-   
+         </div>
 </body>
 
 </html>
