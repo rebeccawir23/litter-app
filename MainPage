@@ -1,12 +1,151 @@
 <!doctype html>
 <html>
-  <head>
-    <!-- Camera goes here -->
-  </head>
+<head>
+<meta charset="utf-8" />
 
-  <body>
-    <button type="button" name="reportButton" rel = "stylesheet" href = "stylesheet.css"<a href="camera.html">Report</a></button>
-    <button type="button" name="menuButton" rel = "stylesheet" href = "stylesheet.css"<a href="menu.html">Menu</a></button>
-    <button type="button" name="loginButton" rel = "stylesheet" href = "stylesheet.css"<a href="login.html">Login</a></button>
+<title>Keep Boise Beautiful</title>
+
+<base href="/" />
+
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+
+<link rel='stylesheet' href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<style>
+    #map {
+      height: 400px;
+      width: 100%;
+     }
+     button {
+       border-radius: 5px;
+       color: white;
+       background-color: mediumseagreen;
+       padding: 5px 10px 8px 10px;
+       height: 40px;
+       width: 70px;
+       font-size: 15px;
+     }
+     button:hover {
+       animation-name: background-color;
+       animation-duration: 1000ms;
+     }
+
+
+  </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+      <div class="progress-bar bg-success" style="width:100%;"><img src="images/litterLogo.png" class="img-fluid" style="width:250px; height: auto;"><h3><small class="text-muted"></div>
+      <div class="bg-secondary"><h1 class="Display-4" style="color:black;"><center>Keep Boise Beautiful</center></h1></div>
+    <div id="map"> </div>
+
+    <script>
+      function initMap() {
+       var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 43.6016653, lng: -116.2106962},
+          zoom: 15,
+            styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
+    </script>
+          <script src="MapController.js" type='text/jscript'></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGCMiqzOs2q6xEDZqxDdVbXbfEPVYhbzM&callback=initMap" async defer></script>
+
+
+    <center>
+      <button type="button" name="reportButton" rel = "stylesheet" href = "stylesheet.css"<a href="camera.html">Report</a></button>
+      <button type="button" name="menuButton" rel = "stylesheet" href = "stylesheet.css"<a href="menu.html">Menu</a></button>
+      <button type="button" name="loginButton" rel = "stylesheet" href = "stylesheet.css"<a href="login.html">Login</a></button>
+    </center>
   </body>
 </html>
