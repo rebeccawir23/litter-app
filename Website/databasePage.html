@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<link rel = "stylesheet"
+   type = "text/css"
+   href = "stylesheet.css" />
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<div class="container-fluid">
+	
+	<nav class="topnav" id = "menu">
+  	<li><a class="active" href="index.html">Home</a></li>
+  	<li><a href="wendyPage.html">Wendy Hartford</a></li>
+  	<li><a href="brandonPage.html">Brandon Keoloha</a></li>
+  	<li><a href="joeyPage.html">Joey Sacino</a></li>
+	<li><a href="rebeccaPage.html">Rebecca Wirick</a></li>
+	<li><a href="databasePage.html">Litter App Data</a></li>
+		</nav>
+	</div>
+	</head>
+	<body>
+	<div class="bioBox">
+	
+    <h3 id="jTitle">Litter App Data</h3>
+		</div>
+		<center><img src="Images/litterLogo.png" class="litter-Logo" alt="litter logo"></center>
+		</body>
+	
+<div id="map">
+    <script src="https://www.gstatic.com/firebasejs/5.10.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAmRAxzY0gh-QdGe6-iRldN-QF548iwZi0",
+        authDomain: "book-app-238520.firebaseapp.com",
+        databaseURL: "https://book-app-238520.firebaseio.com",
+        projectId: "book-app-238520",
+        storageBucket: "book-app-238520.appspot.com",
+        messagingSenderId: "671778344174"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="firebaseController.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="maps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz5Cuj4mQeOo_H3b4iRhlWZXzQJ-w03_8&callback=initMap" async defer></script>
+</div>
+</html>

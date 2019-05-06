@@ -1,0 +1,18 @@
+/* CSS Document */
+
+#map{
+	width: 500;
+    height: 500;
+}
+html, body{
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.image-sizing{
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    height: 30%;
+}
