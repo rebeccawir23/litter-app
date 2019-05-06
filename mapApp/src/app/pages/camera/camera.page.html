@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Add Your Photo!</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      
+        <ion-item>
+          <ion-label>
+            Location title:
+          </ion-label>
+          <ion-input [(ngModel)]="location.title" placeholder="title...."></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>
+            Location content:
+          </ion-label>
+          <ion-input [(ngModel)]="location.content" placeholder="title...."></ion-input>
+        </ion-item>
+      
+        <ion-card>
+          <ion-button size="large" (click)="openCamera()">Take Picture</ion-button>
+          <ion-card-content>
+            Picture:
+            <img [src]="base64Image" *ngIf="base64Image"/>
+          </ion-card-content>
+        </ion-card>
+        <ion-button block clear (click)="addLocation(location)" routerLink="../map"
+        routerDirection="forward">Add Location and Content</ion-button>
+        <ion-button block clear (click)="deleteLocation(location)" routerLink="../map"
+        routerDirection="forward">Delete</ion-button>
+        <ion-row justify-content-between align-items-start>
+            <ion-button shape="round" color="success" routerLink="../account" routerDirection="forward"><ion-icon slot="start" name="contact"></ion-icon>Account</ion-button>
+            <ion-button shape="round" color="success" routerLink="../map" router Direction="back"><ion-icon slot="start" name="map"></ion-icon>Map</ion-button>
+          </ion-row>
+  </ion-content>
+  

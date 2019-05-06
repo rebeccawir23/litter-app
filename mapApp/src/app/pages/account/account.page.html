@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Account Details</ion-title>
+ 
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+      <ion-button (click)="editLocation(location)" routerLink="../camera"
+      routerDirection="forward">Update</ion-button>
+      <ion-button block clear (click)="deleteLocation(location)" routerLink="../map"
+      routerDirection="forward">Delete</ion-button>
+  
+        <ion-item>
+      <ion-label>
+      Location title:
+      </ion-label>
+      <ion-input [(ngModel)]="location.title" placeholder="title..."></ion-input>
+    </ion-item>
+  
+    <ion-item>
+        <ion-label>
+          Location content:
+        </ion-label>
+        <ion-input [(ngModel)]="location.content"></ion-input>
+      </ion-item>
+  
+      
+  </ion-content>
+  
